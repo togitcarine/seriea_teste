@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --cor-vermelha: #FF1510;
+    --cor-rosa: #FDECEC;
+    --cor-cinza: #EFE6E6;
+
+    --cor-cinza-tipografia: #404040;
+    --cor-cinza-tipografia2: #8c8c8c;
+    --cor-cinza-tipografia3: #b9b9b9;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.logo img {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.explore-heroi {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.explore-heroi h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--cor-cinza-tipografia);
+}
+
+.explore-heroi p {
+    color: var(--cor-cinza-tipografia2);
+    font-size: 0.75rem;
+    margin: 10px 0 30px;
+}
+
+.barra-buscar {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.barra-buscar img {
+    position: absolute;
+    left: 20px;
+    top: 25%;
+
+}
+
+input { 
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--cor-rosa);
+    color: var(--cor-vermelha);
+    outline: none;
+
+}
+
+input::placeholder {
+    color: var(--cor-vermelha);
+}
+
+.buscar-heroi {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    max-width: 700px;               
+    margin: 0 auto 20px;           
+    font-size: 0.85rem;
+    color: var(--cor-cinza-tipografia3);
+
+}
+
+.buscar-heroi > div {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 34px;                     
+}
+
+.buscar-heroi p {
+    color: var(--cor-cinza-tipografia3);
+    font-size: 0.75rem;
+}
+
+.buscar-heroi img {
+    width: 15px;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 10px;
+    padding: 0px;
+    margin: 0px;
+    appearance: none;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]checked::before {
+    transform: translateX(10px);
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: -2.5px; 
+    left: 0;
+    align-items: center;
+    position: absolute;
+    background-color: var(--cor-vermelha);
+
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(10px);
+}
+
+.grid-herois {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;                             
+    margin-top: 40px;
+}
+
+.card-heroi {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-imagem {
+    width: 100%;
+    height: 150px; 
+    border-bottom: 5px solid var(--cor-vermelha); 
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-informacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.card-informacao p {
+    font-weight: 600;
+    color: var(--cor-cinza-tipografia2);
+    font-size: 0.85rem;
+}
+
+.btn-favoritar {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-favoritar img {
+    width: 18px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor-vermelha);
+}
+
+
+/*Hero - page*/
+
+.header-hero-page {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.hero-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-hero-page img {
+    width: 200px;
+    margin-right: 60px; 
+}
+
+.busca-heropage {
+    position: relative;
+    max-width: 600px;
+}
+
+.busca-heropage img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 18px;
+}
+
+.busca-heropage input {
+    width: 100%;
+    background-color: #fff; 
+    padding: 12px 20px 12px 45px;
+    border-radius: 25px;
+    font-size: 0.95rem;;
+    color: var(--cor-cinza-tipografia2);
+    border: none;
+    outline: none;
+}
+
+.busca-heropage input::placeholder {
+    color: var(--cor-cinza-tipografia3);
+}
+
+
+.detalhes {
+    background-color: #fff
+    min-height 100vh;
+}
+
+.heroi {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.heroi-informacao {
+    flex: 1;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--cor-cinza-tipografia);
+}
+
+.coracao-favorito {
+    width: 25px;
+}
+
+.descricao {
+    color: var(--cor-cinza-tipografia2);
+    line-height: 1.6;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+
+.rank {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.ranking span, .rank span {
+    font-size: 0.85rem;
+    color: var(--cor-cinza-tipografia);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone img {
+    width: 22px;
+}
+
+.estrelas {
+    color: var(--cor-vermelha);
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+
+.heroi-imagem {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.personagem {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+}
+
+
+.lancamentos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.lancamentos h2 {
+    margin-bottom: 30px;
+    color: var(--cor-cinza-tipografia);
+}
+
+.quandrinhos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.quadrinhos-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.quadrinhos-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 12px;
+   
+}
+
+.quadrinhos-card:hover img {
+    transform: translateY(-5px);
+}
+
+.quadrinhos-card p {
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--cor-cinza-tipografia);
+}
