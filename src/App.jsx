@@ -6,7 +6,7 @@ function App() {
   const [heroes, setHeroes] = useState([]);
   const [heroisIniciais, setHeroisIniciais] = useState([]);
   const [buscarHerois, setBuscarHerois] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     async function carregarHerois() {
@@ -23,9 +23,13 @@ function App() {
     carregarHerois();
   }, [])
 
+/*useEffect - executa as tarefas assim que aparece a tela.
+caso o array estiver vazio, ele roda somente uma vez.
+useState - vai mudando as variáveis da memória do buscarHerois*/
+
   useEffect(() => {
     async function buscarNome() {
-      if (buscarHerois.trim().length > 2) {
+      if (buscarHerois.trim().length > 1) {
         setLoading(true);
         const resultados = await buscarHeroisNome(buscarHerois);
         setHeroes(resultados);
@@ -97,5 +101,4 @@ function App() {
     </>
   );
 }
-
 export default App
